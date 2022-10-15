@@ -7,6 +7,7 @@
   --white-color: #ffffff;
   --black-color: #000000;
   --hero-button-bg: #188ce8;
+  --icons-color: #afb1b8;
 }
 
 *,
@@ -26,20 +27,21 @@ p {
   margin: 0;
 }
 
-ul,ol{
+ul,
+ol {
   margin: 0;
-    padding-left: 0;
+  padding-left: 0;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-address{
+address {
   font-style: normal;
 }
 
-img{
+img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -158,9 +160,10 @@ body {
 }
 
 .header-contacts .link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 
   color: var(--primary-color-text);
   font-weight: 500;
@@ -172,6 +175,15 @@ body {
 .header-contacts .link:hover,
 .header-contacts .link:focus {
   color: var(--accent);
+}
+
+.header-icon {
+  margin-right: 10px;
+  fill: var(--primary-color-text);
+}
+
+.link:hover .header-icon {
+  fill: var(--accent);
 }
 
 /*------Section-title------*/
@@ -193,6 +205,13 @@ body {
 /*------Hero------*/
 .hero {
   background-color: var(--secondary-bg-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero_bg.jpg);
+  background-position: center;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -216,6 +235,7 @@ body {
   border-radius: 4px;
   margin-top: 40px;
   border: none;
+  padding: 10px 32px;
 
   color: var(--white-color);
   background-color: var(--accent);
@@ -266,6 +286,17 @@ body {
   margin-right: 0;
 }
 
+.benefits-icon-bg {
+  width: 270px;
+  height: 120px;
+  background-color: var(--third-bg-color);
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*------Work list------*/
 
 .work-list {
@@ -299,7 +330,6 @@ body {
 
 .member-container .position {
   margin-top: 10px;
-  padding-bottom: 30px;
 
   color: var(--primary-color-text);
   font-size: 16px;
@@ -314,6 +344,77 @@ body {
 
 .members-list .members-item {
   background-color: var(--white-color);
+  box-shadow: 0px 4px rgba(00, 00, 00, 0.25);
+}
+
+.member-socials-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-link:hover {
+  background-color: var(--accent);
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icons-color);
+}
+
+.social-link:hover .social-icon {
+  fill: var(--white-color);
+}
+
+/*------Clients------*/
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+}
+
+.client-link:hover {
+  border: 1px solid var(--accent);
+}
+
+.client-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  fill: var(--icons-color);
+}
+
+.client-link:hover .client-icon {
+  fill: var(--accent);
 }
 
 /*------Footer------*/
@@ -327,9 +428,13 @@ body {
   display: block;
 }
 
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
 .footer-address {
   margin-top: 20px;
-  padding-bottom: 60px;
 }
 
 .footer-address .item:not(:last-child) {
@@ -351,6 +456,42 @@ body {
 .footer-contacts .link:hover,
 .footer-contacts .link:focus {
   color: var(--accent);
+}
+
+.footer-socials {
+  margin-left: 70px;
+}
+
+.footer-socials-title {
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+.footer-socials-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.footer-socials-link:hover {
+  background-color: var(--accent);
+}
+
+.footer-socials-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  fill: var(--white-color);
 }
 
 /*------Portfolio------*/
@@ -397,10 +538,10 @@ body {
 
 .projects-list .item {
   flex-basis: calc((100% - 60px) / 3);
-  border: 1 px solid #EEEEEE;
+  border: 1 px solid #eeeeee;
 }
 
-.project-container{
+.project-container {
   padding: 20px 24px;
 }
 
